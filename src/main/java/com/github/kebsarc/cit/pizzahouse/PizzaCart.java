@@ -15,6 +15,7 @@ import javax.swing.ListModel;
 public class PizzaCart extends AbstractListModel<String> {
 
     Pizzas pizzas = new Pizzas();
+    Desserts desserts = new Desserts();
 
     public PizzaCart() {
     }
@@ -33,12 +34,24 @@ public class PizzaCart extends AbstractListModel<String> {
 
     @Override
     public int getSize() {
-        return pizzas.getSize();
+        return pizzas.getSize() + desserts.getSize();
     }
 
     @Override
     public String getElementAt(int i) {
-        return pizzas.getElementAt(i);
+        if (i < pizzas.getSize()) {
+            return pizzas.getElementAt(i);
+        }
+        return this.desserts.getElementAt(i - pizzas.getSize());
+    }
+
+    ListModel<String> getDesserts() {
+        return this.desserts;
+    }
+
+    void addDessert(String name) {
+        this.desserts.add(name);
+
     }
 
 }
