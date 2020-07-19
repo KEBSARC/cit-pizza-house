@@ -339,7 +339,7 @@ public class Pizza extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-Sides obj = new Sides(pizzaCart);
+Side obj = new Side(pizzaCart);
 obj.setVisible(true);
 this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -383,7 +383,7 @@ Dessert obj = new Dessert(pizzaCart);
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-        Sides obj = new Sides(pizzaCart);
+        Side obj = new Side(pizzaCart);
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton26ActionPerformed

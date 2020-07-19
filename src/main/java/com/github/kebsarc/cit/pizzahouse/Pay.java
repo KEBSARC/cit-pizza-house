@@ -339,7 +339,7 @@ public class Pay extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
-        Sides obj = new Sides(pizzaCart);
+        Side obj = new Side(pizzaCart);
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton30ActionPerformed

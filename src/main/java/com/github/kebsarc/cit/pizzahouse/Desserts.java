@@ -31,7 +31,7 @@ class Desserts extends AbstractListModel<String> {
         if (desserts.add(name)) {
             fireContentsChanged(this, desserts.size(), desserts.size());
         } else {
-            throw new RuntimeException("failed to add desser " + name);
+            throw new RuntimeException("failed to add dessert " + name);
         }
     }
 

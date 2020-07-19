@@ -9,16 +9,20 @@ package com.github.kebsarc.cit.pizzahouse;
  *
  * @author 17065
  */
-public class Dessert extends javax.swing.JFrame {
+public class Side extends javax.swing.JFrame {
 
     private final PizzaCart pizzaCart;
 
     /**
-     * Creates new form Dessert
+     * Creates new form Black2
      */
-    public Dessert(PizzaCart pizzaCart) {
+    public Side(PizzaCart pizzaCart) {
         this.pizzaCart = pizzaCart;
         initComponents();
+    }
+
+    Side() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -52,46 +56,46 @@ public class Dessert extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        desserts = new javax.swing.JList<>();
+        sides = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton24.setText("Dessert 2");
+        jButton24.setText("Side 2");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
             }
         });
 
-        jButton25.setText("Dessert");
+        jButton25.setText("Side");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton25ActionPerformed(evt);
             }
         });
 
-        jButton26.setText("Dessert 4");
+        jButton26.setText("Side 4");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton26ActionPerformed(evt);
             }
         });
 
-        jButton27.setText("Dessert 5");
+        jButton27.setText("Side 5");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton27ActionPerformed(evt);
             }
         });
 
-        jButton28.setText("Dessert 6");
+        jButton28.setText("Side 6");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton28ActionPerformed(evt);
             }
         });
 
-        jButton29.setText("Dessert 3");
+        jButton29.setText("Side 3");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton29ActionPerformed(evt);
@@ -142,6 +146,7 @@ public class Dessert extends javax.swing.JFrame {
             }
         });
 
+        jButton30.setBackground(new java.awt.Color(24, 214, 84));
         jButton30.setText("Sides");
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +161,6 @@ public class Dessert extends javax.swing.JFrame {
             }
         });
 
-        jButton32.setBackground(new java.awt.Color(24, 214, 84));
         jButton32.setText("Dessert");
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,7 +208,6 @@ public class Dessert extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(110, 110, 110));
         jButton2.setText("Confirm Order");
-        jButton2.setToolTipText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -237,15 +240,15 @@ public class Dessert extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("Dessert");
+        jLabel1.setText("Sides");
 
         jLabel3.setText("Price:$");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Receipt");
 
-        desserts.setModel(pizzaCart.getDesserts());
-        jScrollPane1.setViewportView(desserts);
+        sides.setModel(pizzaCart.getSides());
+        jScrollPane1.setViewportView(sides);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -330,83 +333,80 @@ public class Dessert extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-           pizzaCart.addDessert("Dessert 2"); 
+       pizzaCart.addSide("Side 2");
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-           pizzaCart.addDessert("Dessert 1"); 
-
+       pizzaCart.addSide("Side 1");
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-           pizzaCart.addDessert("Dessert 5"); 
+       pizzaCart.addSide("Side 5");
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Pizza obj = new Pizza(pizzaCart);
-        obj.setVisible(true);
-        this.dispose();// TODO add your handling code here:
+Pizza obj = new Pizza(pizzaCart);
+obj.setVisible(true);
+this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
-        Side obj = new Side(pizzaCart);
-        obj.setVisible(true);
-        this.dispose();
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton30ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton32ActionPerformed
+Dessert obj = new Dessert(pizzaCart);
+        obj.setVisible(true);
+        this.dispose();     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
-  Pay obj = new Pay(pizzaCart);
+      Pay obj = new Pay(pizzaCart);
         obj.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+        this.dispose(); 
     }//GEN-LAST:event_jButton33ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  Pay obj = new Pay(pizzaCart);
-        obj.setVisible(true);
-        this.dispose();      
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Drinks obj = new Drinks(pizzaCart);
-        obj.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    Pay obj = new Pay(pizzaCart);
-        obj.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
-         Drinks obj = new Drinks(pizzaCart);
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+ Drinks obj = new Drinks(pizzaCart);
         obj.setVisible(true);
-        this.dispose();
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Pizza obj = new Pizza(pizzaCart);
+        obj.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+  Pay obj = new Pay(pizzaCart);
+        obj.setVisible(true);
+        this.dispose();    
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+      Drinks obj = new Drinks(pizzaCart);
+        obj.setVisible(true);
+        this.dispose(); 
     }//GEN-LAST:event_jButton31ActionPerformed
 
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+       pizzaCart.addSide("Side 6");
+    }//GEN-LAST:event_jButton28ActionPerformed
+
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-           pizzaCart.addDessert("Dessert 3"); 
+       pizzaCart.addSide("Side 3");
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-           pizzaCart.addDessert("Dessert 4"); 
+       pizzaCart.addSide("Side 4");
     }//GEN-LAST:event_jButton26ActionPerformed
-
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
-           pizzaCart.addDessert("Dessert 6"); 
-    }//GEN-LAST:event_jButton28ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> desserts;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton24;
@@ -429,5 +429,6 @@ public class Dessert extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList<String> sides;
     // End of variables declaration//GEN-END:variables
 }
