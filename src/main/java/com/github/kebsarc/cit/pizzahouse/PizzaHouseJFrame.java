@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg12cit.pizza.house.school.project;
+package com.github.kebsarc.cit.pizzahouse;
 
 /**
  *
@@ -36,7 +36,7 @@ public class PizzaHouseJFrame extends javax.swing.JFrame {
         jButton1.setText("Run");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                launchPizzaHouse(evt);
             }
         });
 
@@ -85,12 +85,12 @@ public class PizzaHouseJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Pizza obj = new Pizza();
+    private void launchPizzaHouse(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launchPizzaHouse
+        Pizza obj = new Pizza(new PizzaCart());
         obj.setVisible(true);// TODO add your handling code here:
         this.dispose();
         //LBLmessage.setText ("balls");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_launchPizzaHouse
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        System.exit(0);
