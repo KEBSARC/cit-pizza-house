@@ -63,11 +63,13 @@ public class PizzaCart extends AbstractListModel<String> {
     
     void addDessert(String name) {
         this.desserts.add(name);
+        updateOrderField();
         
     }
     
     void addSide(String name) {
         this.sides.add(name);
+        updateOrderField();
     }
     
     ListModel<String> getSides() {
@@ -77,6 +79,7 @@ public class PizzaCart extends AbstractListModel<String> {
     
     void addDrink(String name) {
         this.drinks.add(name);
+        updateOrderField();
     }
     
     ListModel<String> getDrinks() {

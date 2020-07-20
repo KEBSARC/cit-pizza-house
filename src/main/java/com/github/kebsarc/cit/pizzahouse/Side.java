@@ -248,11 +248,13 @@ public class Side extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Receipt");
 
+        jScrollPane1.setWheelScrollingEnabled(false);
+
         sides.setModel(pizzaCart.getSides());
         jScrollPane1.setViewportView(sides);
 
-        jTextField1.setText(pizzaCart.getTotal());
         jTextField1.setEnabled(false);
+        pizzaCart.registerTotalField(jTextField1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

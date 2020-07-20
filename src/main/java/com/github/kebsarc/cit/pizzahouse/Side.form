@@ -374,6 +374,9 @@
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <Properties>
+            <Property name="wheelScrollingEnabled" type="boolean" value="false"/>
+          </Properties>
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -394,11 +397,11 @@
         </Container>
         <Component class="javax.swing.JTextField" name="jTextField1">
           <Properties>
-            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="pizzaCart.getTotal()" type="code"/>
-            </Property>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pizzaCart.registerTotalField(jTextField1);"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

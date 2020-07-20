@@ -104,8 +104,8 @@ public class Drink extends javax.swing.JFrame {
         Drinks.setModel(pizzaCart.getDrinks());
         jScrollPane1.setViewportView(Drinks);
 
-        jTextField1.setText(pizzaCart.getTotal());
         jTextField1.setEnabled(false);
+        pizzaCart.registerTotalField(jTextField1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
