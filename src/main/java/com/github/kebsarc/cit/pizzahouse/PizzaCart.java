@@ -10,8 +10,7 @@ import javax.swing.JTextField;
 import javax.swing.ListModel;
 
 /**
- *
- * @author kebsarc
+ * is a list for all the stuff you want to buy.
  */
 public class PizzaCart extends AbstractListModel<String> {
     
@@ -38,24 +37,38 @@ public class PizzaCart extends AbstractListModel<String> {
         return this;
     }
     
+    /**
+     * returning the sum of all sub carts
+     */
     @Override
     public int getSize() {
         return pizzas.getSize() + sides.getSize() + drinks.getSize() + desserts.getSize();
     }
     
+    /**
+     * 
+     * @param index is the index of the element in the cart that you want to see
+     * @return the name of the item in the cart
+     */
     @Override
-    public String getElementAt(int i) {
-        if (i < pizzas.getSize()) {
-            return pizzas.getElementAt(i);
+    public String getElementAt(int index) {
+        // if this index is part of the pizza list then it returns the pizza
+        if (index < pizzas.getSize())  {
+            return pizzas.getElementAt(index);
         }
-        if (i < pizzas.getSize() + sides.getSize()) {
-            return this.sides.getElementAt(i - pizzas.getSize());
+        
+        // if the index is within the sides subcart then return the cart element 
+        if (index < pizzas.getSize() + sides.getSize()) {
+            return this.sides.getElementAt(index - pizzas.getSize());
         }
-        if (i < pizzas.getSize() + sides.getSize() + drinks.getSize()) {
-            return this.drinks.getElementAt(i - pizzas.getSize() - sides.getSize());
+        
+        //
+        if (index < pizzas.getSize() + sides.getSize() + drinks.getSize()) {
+            return this.drinks.getElementAt(index - pizzas.getSize() - sides.getSize());
         }
-        return this.desserts.getElementAt(i - pizzas.getSize() - sides.getSize() - drinks.getSize());
+        return this.desserts.getElementAt(index - pizzas.getSize() - sides.getSize() - drinks.getSize());
     }
+    
     
     ListModel<String> getDesserts() {
         return this.desserts;
@@ -86,6 +99,10 @@ public class PizzaCart extends AbstractListModel<String> {
         return this.drinks;
     }
     
+    /**
+     * give cost of all items added to cart
+     * @return 
+     */
     String getTotal() {
         int total = pizzas.getSize() * 10;
         total += sides.getSize() * 5;
